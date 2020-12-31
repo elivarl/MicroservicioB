@@ -1,5 +1,7 @@
 package com.exmerdevmicrob.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,11 @@ public class DatosMicroservicioBServiceImpl implements IDatosMicroservicioBServi
 	public DatosMicroservicioB save(DatosMicroservicioB datosMicroservicioB) {
 		datosMicroservicioBDao.save(datosMicroservicioB);
 		return datosMicroservicioB;
+	}
+
+	@Override
+	public  Optional<DatosMicroservicioB>  findById(Integer id) {
+		return datosMicroservicioBDao.findById(id);
 	}
 
 }

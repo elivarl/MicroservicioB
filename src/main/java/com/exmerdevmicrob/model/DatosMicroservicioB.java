@@ -18,12 +18,20 @@ public class DatosMicroservicioB {
 	private String phone;
 	public DatosMicroservicioB() {
 
-	}
-	public DatosMicroservicioB(String name, String lastname, String phone) {
+	}	
+	public DatosMicroservicioB(Integer id, String name, String lastname, String phone) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.lastname = lastname;
 		this.phone = phone;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
